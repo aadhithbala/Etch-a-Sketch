@@ -6,20 +6,31 @@ const resetButton = document.querySelector('.reset-grids');
 
 let dimension = 16;
 
-const gridCount = dimension ** 2;
+let gridCount = dimension ** 2;
 
-const gridSize = containerHeight / dimension;
+let gridSize = containerHeight / dimension;
+
+const drawGrids = function (dimension) {
+  for (let i = 0; i < gridCount; i++) {
+    const grid = document.createElement('div');
+    grid.classList.add('grids');
+    grid.setAttribute('style', `width:${gridSize}px;height:${gridSize}px`);
+    container.appendChild(grid);
+  }
+};
+
+const eraseGrids = function () {
+  grids = document.querySelectorAll('.grids');
+  for (let i = 0; i < grids.length; i++) {
+    grids[i].remove();
+  }
+};
+
+drawGrids(dimension);
 
 console.log(`Total Squares: ${gridCount}, GridSize: ${gridSize}px`);
 
-for (let i = 0; i < gridCount; i++) {
-  const grid = document.createElement('div');
-  grid.classList.add('grids');
-  grid.setAttribute('style', `width:${gridSize}px;height:${gridSize}px`);
-  container.appendChild(grid);
-}
-
-const grids = document.querySelectorAll('.grids');
+let grids = document.querySelectorAll('.grids');
 
 //Change bg-color while mouse enters
 for (let i = 0; i < grids.length; i++) {
@@ -30,8 +41,14 @@ for (let i = 0; i < grids.length; i++) {
 
 resetButton.addEventListener('click', function () {
   dimension = Number(prompt('Enter the dimension of the grid'));
+  gridCount = dimension ** 2;
+  gridSize = containerHeight / dimension;
+
+  console.log(`Total Squares: ${gridCount}, GridSize: ${gridSize}px`);
 
   while (dimension > 50 || dimension === 0) {
     dimension = Number(prompt('The dimension should be between 1 to 50'));
   }
+  eraseGrids();
+  drawGrids(dimension);
 });
