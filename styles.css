@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  border: solid 2px purple;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  border: solid 5px red;
+  width: 500px;
+  height: 500px;
+}
+
+.grids {
+}
