@@ -30,7 +30,7 @@ const drawGrids = function (dimension) {
   }
 
   grids = document.querySelectorAll('.grids');
-  leaveTrial();
+  leaveTrail();
 
   console.log(`TotalGrids: ${totalGrids}, GridSize: ${gridSize}px`);
 };
