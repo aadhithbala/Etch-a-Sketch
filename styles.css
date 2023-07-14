@@ -25,10 +25,6 @@ body {
   box-sizing: border-box;
 }
 
-.hover-effect {
-  background-color: palevioletred;
-}
-
 .reset-grids,
 #colorpicker {
   width: 150px;

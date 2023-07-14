@@ -3,14 +3,22 @@
 const containerHeight = 500;
 const container = document.querySelector('.container');
 const resetButton = document.querySelector('.reset-grids');
-const colorPicker = document.getElementById('colorpicker').value;
 
+let colorPicker;
 let dimension = 16;
 let grids;
 let totalGrids = dimension ** 2;
 let gridSize = containerHeight / dimension;
 
 const generateRandomColor = () => Math.trunc(Math.random() * 255 + 1);
+
+const defaultTrail = function (i) {
+  colorPicker = document.getElementById('colorpicker').value;
+  grids[i].setAttribute(
+    'style',
+    `width:${gridSize}px;height:${gridSize}px;background-color: ${colorPicker}`
+  );
+};
 
 const rainbowTrail = function (i) {
   const randomColor = `rgb(${generateRandomColor()}, ${generateRandomColor()}, ${generateRandomColor()})`;
@@ -23,7 +31,8 @@ const rainbowTrail = function (i) {
 const leaveTrail = function () {
   for (let i = 0; i < grids.length; i++) {
     grids[i].addEventListener('mouseover', function () {
-      rainbowTrail(i);
+      // rainbowTrail(i);
+      defaultTrail(i);
     });
   }
 };
