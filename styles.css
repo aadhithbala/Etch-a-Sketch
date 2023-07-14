@@ -19,7 +19,7 @@ body {
 }
 
 .grids {
-  border: solid 1px blue;
+  /* border: solid 1px blue; */
   flex-shrink: 0;
   box-sizing: border-box;
 }
