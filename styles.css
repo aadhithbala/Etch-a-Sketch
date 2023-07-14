@@ -4,7 +4,6 @@
 }
 
 body {
-  border: solid 2px purple;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -15,7 +14,12 @@ body {
   border: solid 5px red;
   width: 500px;
   height: 500px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .grids {
+  border: solid 1px blue;
+  flex-shrink: 0;
+  box-sizing: border-box;
 }
