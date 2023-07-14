@@ -2,7 +2,11 @@
 
 const containerHeight = 500;
 const container = document.querySelector('.container');
-const dimension = Number(prompt('Enter the number of squares'));
+let dimension = Number(prompt('Enter the number of squares'));
+
+while (dimension > 100 || dimension === 0) {
+  dimension = Number(prompt('Enter the number of squares'));
+}
 
 const gridCount = dimension ** 2;
 
