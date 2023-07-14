@@ -9,11 +9,20 @@ let grids;
 let totalGrids = dimension ** 2;
 let gridSize = containerHeight / dimension;
 
-//Hover Effect Function
+const generateRandomColor = () => Math.trunc(Math.random() * 255 + 1);
+
+const rainbowTrail = function (i) {
+  const randomColor = `rgb(${generateRandomColor()}, ${generateRandomColor()}, ${generateRandomColor()})`;
+  grids[i].setAttribute(
+    'style',
+    `width:${gridSize}px;height:${gridSize}px;background-color: ${randomColor}`
+  );
+};
+
 const leaveTrail = function () {
   for (let i = 0; i < grids.length; i++) {
     grids[i].addEventListener('mouseover', function () {
-      grids[i].classList.add('hover-effect');
+      rainbowTrail(i);
     });
   }
 };
