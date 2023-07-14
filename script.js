@@ -13,7 +13,7 @@ let totalGrids = dimension ** 2;
 let gridSize = containerHeight / dimension;
 
 //Hover Effect Function
-const leaveTrial = function () {
+const leaveTrail = function () {
   for (let i = 0; i < grids.length; i++) {
     grids[i].addEventListener('mouseover', function () {
       grids[i].classList.add('hover-effect');
