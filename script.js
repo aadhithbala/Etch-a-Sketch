@@ -5,11 +5,8 @@ const container = document.querySelector('.container');
 const resetButton = document.querySelector('.reset-grids');
 
 let dimension = 16;
-
 let grids;
-
 let totalGrids = dimension ** 2;
-
 let gridSize = containerHeight / dimension;
 
 //Hover Effect Function
