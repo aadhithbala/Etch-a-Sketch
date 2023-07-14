@@ -8,6 +8,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 50px;
 }
 
 .container {
@@ -26,4 +28,10 @@ body {
 
 .hover-effect {
   background-color: palevioletred;
+}
+
+.reset-grids {
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
 }

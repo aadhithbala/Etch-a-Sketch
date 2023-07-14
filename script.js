@@ -2,7 +2,8 @@
 
 const containerHeight = 500;
 const container = document.querySelector('.container');
-let dimension = 30; //Number(prompt('Enter the dimension of the container'));
+
+let dimension = 16;
 
 const gridCount = dimension ** 2;
 
@@ -23,9 +24,7 @@ for (let i = 0; i < gridCount; i++) {
 
 const grids = document.querySelectorAll('.grids');
 
-//Hover effect while mouse enters
-console.log(grids[1]);
-
+//Change bg-color while mouse enters
 for (let i = 0; i < grids.length; i++) {
   grids[i].addEventListener('mouseover', function () {
     grids[i].classList.add('hover-effect');
