@@ -29,8 +29,18 @@ body {
   background-color: palevioletred;
 }
 
-.reset-grids {
+.reset-grids,
+#colorpicker {
   width: 150px;
   height: 50px;
   font-size: 20px;
+}
+
+.settings {
+  border: solid 1px purple;
+  width: 500px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
