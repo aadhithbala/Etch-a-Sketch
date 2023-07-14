@@ -3,6 +3,7 @@
 const containerHeight = 500;
 const container = document.querySelector('.container');
 const resetButton = document.querySelector('.reset-grids');
+const colorPicker = document.getElementById('colorpicker').value;
 
 let dimension = 16;
 let grids;

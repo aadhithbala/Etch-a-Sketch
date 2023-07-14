@@ -37,7 +37,6 @@ body {
 }
 
 .settings {
-  border: solid 1px purple;
   width: 500px;
   height: 100px;
   display: flex;
