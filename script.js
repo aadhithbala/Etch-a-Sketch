@@ -43,9 +43,7 @@ const eraseGrids = function () {
   }
 };
 
-drawGrids(dimension); //Invoking function to create default 16x16 grid at the start
-
-resetButton.addEventListener('click', function () {
+const resetGrids = function () {
   dimension = Number(prompt('Enter the dimension of the grid'));
   while (dimension > 50 || dimension === 0) {
     dimension = Number(prompt('The dimension should be between 1 to 50'));
@@ -55,4 +53,8 @@ resetButton.addEventListener('click', function () {
   gridSize = containerHeight / dimension;
   eraseGrids();
   drawGrids(dimension);
-});
+};
+
+drawGrids(dimension); //Invoking function to create default 16x16 grid at the start
+
+resetButton.addEventListener('click', resetGrids);
