@@ -27,7 +27,8 @@ body {
 
 .reset-grids,
 #colorpicker,
-.rainbow-btn {
+.rainbow-btn,
+.default-btn {
   width: 150px;
   height: 50px;
   font-size: 20px;
@@ -39,4 +40,5 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }

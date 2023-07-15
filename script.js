@@ -4,6 +4,7 @@ const containerHeight = 500;
 const container = document.querySelector('.container');
 const resetButton = document.querySelector('.reset-grids');
 const rainbowButton = document.querySelector('.rainbow-btn');
+const defalutButton = document.querySelector('.default-btn');
 
 let colorPicker;
 let dimension = 16;
@@ -82,4 +83,8 @@ resetButton.addEventListener('click', resetGrids);
 
 rainbowButton.addEventListener('click', function () {
   rainbowMode = rainbowMode === true ? false : true;
+});
+
+defalutButton.addEventListener('click', function () {
+  rainbowMode = false;
 });
