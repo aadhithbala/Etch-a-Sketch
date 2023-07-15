@@ -66,7 +66,7 @@ const eraseGrids = function () {
 };
 
 const resetGrids = function () {
-  dimension = Number(prompt('Enter the dimension of the grid'));
+  dimension = Number(prompt('Enter the dimension of the grid (1 to 50)'));
   while (dimension > 50 || dimension === 0) {
     dimension = Number(prompt('The dimension should be between 1 to 50'));
   }
