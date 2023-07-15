@@ -3,12 +3,14 @@
 const containerHeight = 500;
 const container = document.querySelector('.container');
 const resetButton = document.querySelector('.reset-grids');
+const rainbowButton = document.querySelector('.rainbow-btn');
 
 let colorPicker;
 let dimension = 16;
 let grids;
 let totalGrids = dimension ** 2;
 let gridSize = containerHeight / dimension;
+let rainbowMode = false;
 
 const generateRandomColor = () => Math.trunc(Math.random() * 255 + 1);
 
@@ -31,8 +33,11 @@ const rainbowTrail = function (i) {
 const leaveTrail = function () {
   for (let i = 0; i < grids.length; i++) {
     grids[i].addEventListener('mouseover', function () {
-      // rainbowTrail(i);
-      defaultTrail(i);
+      if (rainbowMode === true) {
+        rainbowTrail(i);
+      } else {
+        defaultTrail(i);
+      }
     });
   }
 };
@@ -74,3 +79,7 @@ const resetGrids = function () {
 drawGrids(dimension); //Invoking function to create default 16x16 grid at the start
 
 resetButton.addEventListener('click', resetGrids);
+
+rainbowButton.addEventListener('click', function () {
+  rainbowMode = rainbowMode === true ? false : true;
+});
