@@ -6,7 +6,8 @@ const resetButton = document.querySelector('.reset-grids');
 const rainbowButton = document.querySelector('.rainbow-btn');
 const defalutButton = document.querySelector('.default-btn');
 const eraserButton = document.querySelector('.eraser-btn');
-const colorPicketButton = document.getElementById('.colorpicker');
+const colorPickerButton = document.getElementById('colorpicker');
+console.log(colorPickerButton);
 
 const eraserColor = `#ffeedb`;
 
@@ -72,7 +73,7 @@ const drawGrids = function (dimension) {
 };
 
 //Erases grids by iterating over the nodelist
-const eraseGrids = function () {
+const removeGrids = function () {
   grids = document.querySelectorAll('.grids');
   for (let i = 0; i < grids.length; i++) {
     grids[i].remove();
@@ -87,7 +88,7 @@ const resetGrids = function () {
 
   totalGrids = dimension ** 2;
   gridSize = containerHeight / dimension;
-  eraseGrids();
+  removeGrids();
   drawGrids(dimension);
 };
 
@@ -97,7 +98,6 @@ resetButton.addEventListener('click', resetGrids);
 
 rainbowButton.addEventListener('click', function () {
   rainbowMode = rainbowMode === true ? false : true;
-  eraserMode = false;
 });
 
 defalutButton.addEventListener('click', function () {
@@ -105,12 +105,12 @@ defalutButton.addEventListener('click', function () {
   eraserMode = false;
 });
 
-colorPicketButton.addEventListener('click', function () {
+eraserButton.addEventListener('click', function () {
+  eraserMode = true;
   rainbowMode = false;
-  eraserMode = false;
 });
 
-eraserButton.addEventListener('click', function () {
-  eraserMode = eraserMode === true ? false : true;
+colorPickerButton.addEventListener('click', function () {
   rainbowMode = false;
+  eraserMode = false;
 });
