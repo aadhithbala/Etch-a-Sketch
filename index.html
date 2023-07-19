@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-a-Sketch</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./styles.css" />
     <script src="./script.js" defer></script>
   </head>
@@ -12,18 +20,22 @@
       <h1 class="title">Etch-a-Sketch</h1>
 
       <div class="wrapper">
-        <div class="settings">
-          <button class="default-btn">Normal</button>
-          <button class="rainbow-btn">Rainbow</button>
-          <button class="reset-grids">Reset Grids</button>
-          <input type="color" name="colorpicker" id="colorpicker" value="#444444" />
+        <div class="settings buttons">
+          <button class="default-btn button">Normal</button>
+          <button class="rainbow-btn button">Rainbow</button>
+          <button class="reset-grids button">Reset Grids</button>
+          <input
+            type="color"
+            name="colorpicker"
+            id="colorpicker"
+            value="#444444"
+          />
         </div>
-  
+
         <div class="container"></div>
       </div>
 
       <footer class="footer">Lorem ipsum dolor sit amet consectetur</footer>
-    </body>
     </main>
-
+  </body>
 </html>
