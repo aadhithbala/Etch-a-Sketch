@@ -18,7 +18,9 @@ body {
 
 .container {
   box-sizing: content-box;
-  border: solid 5px red;
+  background-color: #ffeedb;
+  border-radius: 3rem;
+  overflow: hidden;
   width: 50rem;
   height: 50rem;
   display: flex;
