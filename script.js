@@ -5,6 +5,9 @@ const container = document.querySelector('.container');
 const resetButton = document.querySelector('.reset-grids');
 const rainbowButton = document.querySelector('.rainbow-btn');
 const defalutButton = document.querySelector('.default-btn');
+const eraserButton = document.querySelector('.eraser-btn');
+
+const eraserColor = `#ffeedb`;
 
 let colorPicker;
 let dimension = 16;
@@ -12,6 +15,7 @@ let grids;
 let totalGrids = dimension ** 2;
 let gridSize = containerHeight / dimension;
 let rainbowMode = false;
+let eraserMode = false;
 
 const generateRandomColor = () => Math.trunc(Math.random() * 255 + 1);
 
@@ -31,11 +35,20 @@ const rainbowTrail = function (i) {
   );
 };
 
+const eraseTrail = function (i) {
+  grids[i].setAttribute(
+    'style',
+    `width:${gridSize}px;height:${gridSize}px;background-color: ${eraserColor}`
+  );
+};
+
 const leaveTrail = function () {
   for (let i = 0; i < grids.length; i++) {
     grids[i].addEventListener('mouseover', function () {
       if (rainbowMode === true) {
         rainbowTrail(i);
+      } else if (eraserMode === true) {
+        eraseTrail(i);
       } else {
         defaultTrail(i);
       }
@@ -83,8 +96,15 @@ resetButton.addEventListener('click', resetGrids);
 
 rainbowButton.addEventListener('click', function () {
   rainbowMode = rainbowMode === true ? false : true;
+  eraserMode = false;
 });
 
 defalutButton.addEventListener('click', function () {
+  rainbowMode = false;
+  eraserMode = false;
+});
+
+eraserButton.addEventListener('click', function () {
+  eraserMode = eraserMode === true ? false : true;
   rainbowMode = false;
 });
