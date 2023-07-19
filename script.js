@@ -6,8 +6,8 @@ const resetButton = document.querySelector('.reset-grids');
 const rainbowButton = document.querySelector('.rainbow-btn');
 const defalutButton = document.querySelector('.default-btn');
 const eraserButton = document.querySelector('.eraser-btn');
+const clearButton = document.querySelector('.clear-btn');
 const colorPickerButton = document.getElementById('colorpicker');
-console.log(colorPickerButton);
 
 const eraserColor = `#ffeedb`;
 
@@ -92,6 +92,16 @@ const resetGrids = function () {
   drawGrids(dimension);
 };
 
+const clearAllGrids = function () {
+  grids = document.querySelectorAll('.grids');
+  for (let i = 0; i < grids.length; i++) {
+    grids[i].setAttribute(
+      'style',
+      `width:${gridSize}px;height:${gridSize}px;background-color:${eraserColor}`
+    );
+  }
+};
+
 drawGrids(dimension); //Invoking function to create default 16x16 grid at the start
 
 resetButton.addEventListener('click', resetGrids);
@@ -112,5 +122,10 @@ eraserButton.addEventListener('click', function () {
 
 colorPickerButton.addEventListener('click', function () {
   rainbowMode = false;
+  eraserMode = false;
+});
+
+clearButton.addEventListener('click', function () {
+  clearAllGrids();
   eraserMode = false;
 });
