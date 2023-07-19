@@ -111,11 +111,21 @@ body {
   color: #ffeedb;
 }
 
+.clear-btn {
+  background-color: #ffeedb;
+}
+
+.clear-btn:hover,
+.clear-btn:active {
+  background-color: #163f32;
+  color: #ffeedb;
+}
+
 .default-btn:hover,
 .eraser-btn:hover,
 .default-btn:active,
 .eraser-btn:active {
-  background-color: #be7c33;
+  background-color: #d27814;
 }
 
 .reset-grids:hover,
