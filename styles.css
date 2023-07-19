@@ -1,3 +1,22 @@
+:root {
+  --shadow-color: 161deg 43% 35%;
+  --shadow-elevation-low: 0.4px 0.3px 0.5px hsl(var(--shadow-color) / 0.37),
+    0.6px 0.6px 0.9px -1.3px hsl(var(--shadow-color) / 0.35),
+    1.5px 1.4px 2.2px -2.7px hsl(var(--shadow-color) / 0.33);
+  --shadow-elevation-medium: 0.4px 0.3px 0.5px hsl(var(--shadow-color) / 0.39),
+    1.2px 1.1px 1.8px -0.9px hsl(var(--shadow-color) / 0.38),
+    3px 2.8px 4.5px -1.8px hsl(var(--shadow-color) / 0.36),
+    7.4px 7px 11.2px -2.7px hsl(var(--shadow-color) / 0.35);
+  --shadow-elevation-high: 0.4px 0.3px 0.5px hsl(var(--shadow-color) / 0.36),
+    2px 1.9px 3px -0.4px hsl(var(--shadow-color) / 0.36),
+    3.8px 3.6px 5.7px -0.8px hsl(var(--shadow-color) / 0.35),
+    6.4px 6px 9.6px -1.2px hsl(var(--shadow-color) / 0.34),
+    10.3px 9.7px 15.5px -1.5px hsl(var(--shadow-color) / 0.34),
+    16.4px 15.4px 24.6px -1.9px hsl(var(--shadow-color) / 0.33),
+    25.1px 23.6px 37.7px -2.3px hsl(var(--shadow-color) / 0.32),
+    37.2px 35px 55.9px -2.7px hsl(var(--shadow-color) / 0.32);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -25,6 +44,7 @@ body {
   height: 50rem;
   display: flex;
   flex-wrap: wrap;
+  box-shadow: var(--shadow-elevation-high);
 }
 
 .main-container {
@@ -53,6 +73,7 @@ body {
   border-radius: 1.5rem;
   border: none;
   transition: all 0.3s;
+  box-shadow: var(--shadow-elevation-high);
 }
 
 .default-btn,
@@ -60,7 +81,7 @@ body {
   background-color: #ed9b40;
 }
 
-.reset-btn,
+.reset-grids,
 .rainbow-btn {
   background-color: #ba3b46;
   color: #ffeedb;
@@ -73,9 +94,9 @@ body {
   background-color: #be7c33;
 }
 
-.reset-btn:hover,
+.reset-grids:hover,
 .rainbow-btn:hover,
-.reset-btn:active,
+.reset-grids:active,
 .rainbow-btn:active {
   background-color: #822931;
 }
