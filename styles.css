@@ -48,9 +48,7 @@ body {
 }
 
 .wrapper-content {
-  border: solid 2px red;
   text-align: center;
-  /* padding: ; */
 }
 
 .main-container {
@@ -152,4 +150,20 @@ body {
   justify-content: center;
   align-items: center;
   color: #ffeedb;
+}
+
+footer > a:link,
+footer > a:visited,
+footer > a:hover,
+footer > a:active {
+  text-decoration: none;
+  color: #ffeedb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.github-logo {
+  width: 2.5rem;
 }
