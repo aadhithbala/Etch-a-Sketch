@@ -6,6 +6,7 @@ const resetButton = document.querySelector('.reset-grids');
 const rainbowButton = document.querySelector('.rainbow-btn');
 const defalutButton = document.querySelector('.default-btn');
 const eraserButton = document.querySelector('.eraser-btn');
+const colorPicketButton = document.getElementById('.colorpicker');
 
 const eraserColor = `#ffeedb`;
 
@@ -100,6 +101,11 @@ rainbowButton.addEventListener('click', function () {
 });
 
 defalutButton.addEventListener('click', function () {
+  rainbowMode = false;
+  eraserMode = false;
+});
+
+colorPicketButton.addEventListener('click', function () {
   rainbowMode = false;
   eraserMode = false;
 });
