@@ -50,6 +50,7 @@ body {
   font-size: 2rem;
   border-radius: 1.5rem;
   border: none;
+  transition: all 0.3s;
 }
 
 .default-btn,
@@ -61,6 +62,20 @@ body {
 .rainbow-btn {
   background-color: #ba3b46;
   color: #ffeedb;
+}
+
+.default-btn:hover,
+.eraser-btn:hover,
+.default-btn:active,
+.eraser-btn:active {
+  background-color: #be7c33;
+}
+
+.reset-btn:hover,
+.rainbow-btn:hover,
+.reset-btn:active,
+.rainbow-btn:active {
+  background-color: #822931;
 }
 
 .wrapper {
