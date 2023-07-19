@@ -13,6 +13,7 @@ body {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   height: 100vh;
+  color: #343a40;
 }
 
 .container {
@@ -31,6 +32,11 @@ body {
   align-items: center;
   justify-content: space-between;
   row-gap: 7rem;
+  background-color: #61c9a8;
+}
+
+.title {
+  margin-top: 5rem;
 }
 
 .grids {
@@ -39,9 +45,22 @@ body {
 }
 
 .button {
-  width: 15rem;
-  height: 5rem;
+  width: 18rem;
+  height: 6rem;
   font-size: 2rem;
+  border-radius: 1.5rem;
+  border: none;
+}
+
+.default-btn,
+.eraser-btn {
+  background-color: #ed9b40;
+}
+
+.reset-btn,
+.rainbow-btn {
+  background-color: #ba3b46;
+  color: #ffeedb;
 }
 
 .wrapper {
