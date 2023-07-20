@@ -147,12 +147,13 @@ body {
 }
 
 .settings {
-  padding: 4rem 4rem;
+  padding: 0rem 4rem;
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
 .footer {
