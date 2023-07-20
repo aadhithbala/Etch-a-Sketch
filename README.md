@@ -6,4 +6,4 @@ This project is part of The Odin Projects' curriculum, designed to help you leve
 
 ## Demo
 
-To see the Etch-a-Sketch project in action, check out the live demo here: [https://aadhithbala.github.io/Etch-a-Sketch/](Etch-a-Sketch)
+To see the Etch-a-Sketch project in action, check out the live demo here: [Etch-a-Sketch](https://aadhithbala.github.io/Etch-a-Sketch/)
